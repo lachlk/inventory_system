@@ -1,0 +1,1 @@
+A simple inventory system for a store. A GUI system would indicate stock levels of current items, and have options to sell/restock individual items. Additional features to be added could include tracking of total items sold, warnings when stock levels are low, details of pricing and margins on each item.
