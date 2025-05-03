@@ -12,6 +12,9 @@ class BaseView(CTkFrame):
 
         self.header_frame = CTkFrame(self)
         self.header_frame.grid(row=0, column=0, sticky="nsew")
+        self.header_frame.grid_columnconfigure(0, weight=2)
+        self.header_frame.grid_columnconfigure(1, weight=1)
+        self.header_frame.grid_columnconfigure(2, weight=1)
 
         self.control_frame = CTkFrame(self)
         self.control_frame.grid(row=1, column=0, sticky="nsew")
