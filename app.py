@@ -1,4 +1,4 @@
-from customtkinter import *
+from customtkinter import CTkFrame
 from views.configure_view import ConfigureView
 
 class App:

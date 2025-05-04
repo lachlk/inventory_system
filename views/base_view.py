@@ -1,4 +1,4 @@
-from customtkinter import *
+from customtkinter import CTkFrame
 
 class BaseView(CTkFrame):
     def __init__(self, parent, controller):
@@ -10,7 +10,7 @@ class BaseView(CTkFrame):
         self.controller = controller
         self.grid(row=0, column=0, sticky="nsew")
 
-        self.header_frame = CTkFrame(self)
+        self.header_frame = CTkFrame(self, fg_color="#3a3b3b")
         self.header_frame.grid(row=0, column=0, sticky="nsew")
         self.header_frame.grid_columnconfigure(0, weight=2)
         self.header_frame.grid_columnconfigure(1, weight=1)

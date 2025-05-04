@@ -1,10 +1,11 @@
-from customtkinter import *
+from tkinter import Tk
 from app import App
 
 def main():
-    root = CTk()
+    root = Tk()
     root.title("Inventory Management System")
-    root.geometry("800x600")
+    root.state('zoomed')
+    root.minsize(800, 600)
     app = App(root)
     root.mainloop()
 if __name__ == "__main__":
