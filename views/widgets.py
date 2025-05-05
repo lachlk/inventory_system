@@ -14,18 +14,21 @@ class EntryButton:
 class ItemTable(CTkFrame):
     def __init__(self, parent):
         super().__init__(parent)
-        self.grid(row=0, column=0, sticky="nsew")
+        self.item_keys = ["Item ID", "Item name", "On hand", "On order", "Available", "Total value"]
 
-        keys = "Item ID, Item name, On hand, On order, Available, Total value"
+        self.columnconfigure(0, weight=1)
+        self.rowconfigure(0, weight=0)
+        self.rowconfigure(1, weight=1)
 
-        columns = 0
-        for i, key in enumerate(keys):
-            label = CTkLabel(self, text=key)
+        self.key_frame = CTkFrame(self, fg_color="#3a3b3b", height=10)
+        self.key_frame.grid(row=0, column=0, sticky="nsew")
+
+        for i, key in enumerate(self.item_keys):
+            self.key_frame.grid_columnconfigure(i, weight=1)
+            label = CTkLabel(self.key_frame, text=key)
             label.grid(row=0, column=i, sticky="nsew")
-            columns += 1
 
         self.scrollable_frame = CTkScrollableFrame(self)
         self.scrollable_frame.grid(row=1, column=0, sticky="nsew")
 
-        self.content_frame = CTkFrame(self.scrollable_frame)
-        self.content_frame.grid(row=0, column=columns, sticky="nsew")
+        

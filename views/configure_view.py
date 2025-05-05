@@ -6,20 +6,20 @@ class ConfigureView(BaseView):
     def __init__(self, parent, controller):
         super().__init__(parent, controller)
 
-        label = CTkLabel(self.header_frame, text="Configure Items", font=("Roboto", 50))
-        label.grid(row=1, column=0, sticky="nsw", padx=self.base_padx)
+        self.label = CTkLabel(self.header_frame, text="Configure Items", font=("Roboto", 50))
+        self.label.grid(row=1, column=0, sticky="nsw", padx=self.base_padx)
 
-        save_button = CTkButton(self.header_frame, text="Save", font=self.base_font)
-        save_button.grid(row=1, column=1, padx=self.base_padx, ipady=self.base_ipady)
+        self.save_button = CTkButton(self.header_frame, text="Save", font=self.base_font)
+        self.save_button.grid(row=1, column=1, padx=self.base_padx, ipady=self.base_ipady)
 
-        import_button = CTkButton(self.header_frame, text="Import", font=self.base_font)
-        import_button.grid(row=1, column=2, padx=self.base_padx, ipady=self.base_ipady)
+        self.import_button = CTkButton(self.header_frame, text="Import", font=self.base_font)
+        self.import_button.grid(row=1, column=2, padx=self.base_padx, ipady=self.base_ipady)
 
-        add_button = CTkButton(self.control_frame, text="Add", font=self.base_font)
-        add_button.grid(row=1, column=0, padx=self.base_padx, ipady=self.base_ipady)
+        self.add_button = CTkButton(self.control_frame, text="Add", font=self.base_font)
+        self.add_button.grid(row=1, column=0, padx=self.base_padx, ipady=self.base_ipady)
 
-        remove_button = CTkButton(self.control_frame, text="Remove", font=self.base_font)
-        remove_button.grid(row=1, column=1, padx=self.base_padx, ipady=self.base_ipady)
+        self.remove_button = CTkButton(self.control_frame, text="Remove", font=self.base_font)
+        self.remove_button.grid(row=1, column=1, padx=self.base_padx, ipady=self.base_ipady)
 
-        item_table = ItemTable(self.content_frame)
-        item_table.grid(row=0, column=0, padx=self.base_padx, ipady=self.base_ipady)
+        self.item_table = ItemTable(self.content_frame)
+        self.item_table.grid(row=0, column=0, ipady=self.base_ipady, sticky="nsew")

@@ -32,5 +32,5 @@ class BaseView(CTkFrame):
 
         self.content_frame = CTkFrame(self)
         self.content_frame.grid(row=2, column=0, sticky="nsew")
-        self.content_frame.grid_rowconfigure(0, weight=1)
         self.content_frame.grid_columnconfigure(0, weight=1)
+        self.content_frame.grid_rowconfigure(0, weight=1)
