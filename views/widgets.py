@@ -23,12 +23,18 @@ class ItemTable(CTkFrame):
         self.key_frame = CTkFrame(self, fg_color="#3a3b3b", height=10)
         self.key_frame.grid(row=0, column=0, sticky="nsew")
 
-        for i, key in enumerate(self.item_keys):
-            self.key_frame.grid_columnconfigure(i, weight=1)
-            label = CTkLabel(self.key_frame, text=key)
-            label.grid(row=0, column=i, sticky="nsew")
-
         self.scrollable_frame = CTkScrollableFrame(self)
         self.scrollable_frame.grid(row=1, column=0, sticky="nsew")
 
-        
+        for i, key in enumerate(self.item_keys):
+            self.key_frame.grid_columnconfigure(i, weight=1)
+            label = CTkLabel(self.key_frame, text=key, corner_radius=10)
+            label.grid(row=0, column=i, sticky="nsew")
+
+    def populate(self, items):
+        for i, item in enumerate(items):
+            for j, key in enumerate(item):
+                self.scrollable_frame.grid_columnconfigure(j, uniform="equal", weight=1)
+                value = item.get(key, "")
+                label = CTkLabel(self.scrollable_frame, text=value, corner_radius=10)
+                label.grid(row=i, column=j, sticky="nsew")

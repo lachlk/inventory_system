@@ -1,10 +1,13 @@
 from customtkinter import CTkLabel, CTkButton
 from views.widgets import ItemTable
 from views.base_view import BaseView
+from controllers.data_manager import DataManager
 
 class ConfigureView(BaseView):
     def __init__(self, parent, controller):
         super().__init__(parent, controller)
+
+        self.data_manager = DataManager('data/items.json')
 
         self.label = CTkLabel(self.header_frame, text="Configure Items", font=("Roboto", 50))
         self.label.grid(row=1, column=0, sticky="nsw", padx=self.base_padx)
@@ -23,3 +26,4 @@ class ConfigureView(BaseView):
 
         self.item_table = ItemTable(self.content_frame)
         self.item_table.grid(row=0, column=0, ipady=self.base_ipady, sticky="nsew")
+        self.item_table.populate(self.data_manager.items)

@@ -1,0 +1,242 @@
+[
+    {
+        "Item ID": "1001",
+        "Item name": "Timber - 2x4 H3.2",
+        "On hand": 200,
+        "On order": 100,
+        "Available": 300,
+        "Total value": 2400
+    },
+    {
+        "Item ID": "1002",
+        "Item name": "Plywood Sheet 18mm",
+        "On hand": 50,
+        "On order": 20,
+        "Available": 70,
+        "Total value": 2100
+    },
+    {
+        "Item ID": "1003",
+        "Item name": "Concrete Mix 25kg Bag",
+        "On hand": 150,
+        "On order": 50,
+        "Available": 200,
+        "Total value": 1500
+    },
+    {
+        "Item ID": "1004",
+        "Item name": "Galvanised Nails 90mm (5kg)",
+        "On hand": 80,
+        "On order": 30,
+        "Available": 110,
+        "Total value": 880
+    },
+    {
+        "Item ID": "1005",
+        "Item name": "PVC Pipe 100mm",
+        "On hand": 60,
+        "On order": 20,
+        "Available": 80,
+        "Total value": 960
+    },
+    {
+        "Item ID": "1006",
+        "Item name": "Paint - Exterior White 10L",
+        "On hand": 40,
+        "On order": 15,
+        "Available": 55,
+        "Total value": 2200
+    },
+    {
+        "Item ID": "1007",
+        "Item name": "Gypsum Board 2400x1200x10mm",
+        "On hand": 100,
+        "On order": 50,
+        "Available": 150,
+        "Total value": 3000
+    },
+    {
+        "Item ID": "1008",
+        "Item name": "Electrical Cable 2.5mm (100m)",
+        "On hand": 25,
+        "On order": 10,
+        "Available": 35,
+        "Total value": 1750
+    },
+    {
+        "Item ID": "1009",
+        "Item name": "Roofing Iron Corrugated 3m",
+        "On hand": 30,
+        "On order": 10,
+        "Available": 40,
+        "Total value": 3200
+    },
+    {
+        "Item ID": "1010",
+        "Item name": "Insulation Batts R3.2 (10m²)",
+        "On hand": 45,
+        "On order": 15,
+        "Available": 60,
+        "Total value": 2700
+    },
+    {
+        "Item ID": "1001",
+        "Item name": "Timber - 2x4 H3.2",
+        "On hand": 200,
+        "On order": 100,
+        "Available": 300,
+        "Total value": 2400
+    },
+    {
+        "Item ID": "1002",
+        "Item name": "Plywood Sheet 18mm",
+        "On hand": 50,
+        "On order": 20,
+        "Available": 70,
+        "Total value": 2100
+    },
+    {
+        "Item ID": "1003",
+        "Item name": "Concrete Mix 25kg Bag",
+        "On hand": 150,
+        "On order": 50,
+        "Available": 200,
+        "Total value": 1500
+    },
+    {
+        "Item ID": "1004",
+        "Item name": "Galvanised Nails 90mm (5kg)",
+        "On hand": 80,
+        "On order": 30,
+        "Available": 110,
+        "Total value": 880
+    },
+    {
+        "Item ID": "1005",
+        "Item name": "PVC Pipe 100mm",
+        "On hand": 60,
+        "On order": 20,
+        "Available": 80,
+        "Total value": 960
+    },
+    {
+        "Item ID": "1006",
+        "Item name": "Paint - Exterior White 10L",
+        "On hand": 40,
+        "On order": 15,
+        "Available": 55,
+        "Total value": 2200
+    },
+    {
+        "Item ID": "1007",
+        "Item name": "Gypsum Board 2400x1200x10mm",
+        "On hand": 100,
+        "On order": 50,
+        "Available": 150,
+        "Total value": 3000
+    },
+    {
+        "Item ID": "1008",
+        "Item name": "Electrical Cable 2.5mm (100m)",
+        "On hand": 25,
+        "On order": 10,
+        "Available": 35,
+        "Total value": 1750
+    },
+    {
+        "Item ID": "1009",
+        "Item name": "Roofing Iron Corrugated 3m",
+        "On hand": 30,
+        "On order": 10,
+        "Available": 40,
+        "Total value": 3200
+    },
+    {
+        "Item ID": "1010",
+        "Item name": "Insulation Batts R3.2 (10m²)",
+        "On hand": 45,
+        "On order": 15,
+        "Available": 60,
+        "Total value": 2700
+    },
+    {
+        "Item ID": "1011",
+        "Item name": "Cement 20kg Bag",
+        "On hand": 120,
+        "On order": 40,
+        "Available": 160,
+        "Total value": 2400
+    },
+    {
+        "Item ID": "1012",
+        "Item name": "Sand - Fine (1m³)",
+        "On hand": 80,
+        "On order": 30,
+        "Available": 110,
+        "Total value": 880
+    },
+    {
+        "Item ID": "1013",
+        "Item name": "Gravel - Coarse (1m³)",
+        "On hand": 70,
+        "On order": 25,
+        "Available": 95,
+        "Total value": 1140
+    },
+    {
+        "Item ID": "1014",
+        "Item name": "Steel Reinforcement Bar (10mm)",
+        "On hand": 200,
+        "On order": 100,
+        "Available": 300,
+        "Total value": 2400
+    },
+    {
+        "Item ID": "1015",
+        "Item name": "Bricks - Standard (1000)",
+        "On hand": 500,
+        "On order": 200,
+        "Available": 700,
+        "Total value": 3500
+    },
+    {
+        "Item ID": "1016",
+        "Item name": "Roofing Tiles - Terracotta",
+        "On hand": 300,
+        "On order": 150,
+        "Available": 450,
+        "Total value": 6750
+    },
+    {
+        "Item ID": "1017",
+        "Item name": "Window Glass - Clear (4mm)",
+        "On hand": 60,
+        "On order": 20,
+        "Available": 80,
+        "Total value": 960
+    },
+    {
+        "Item ID": "1018",
+        "Item name": "Door Frame - Timber",
+        "On hand": 40,
+        "On order": 15,
+        "Available": 55,
+        "Total value": 2200
+    },
+    {
+        "Item ID": "1019",
+        "Item name": "Screws - Stainless Steel (1000)",
+        "On hand": 100,
+        "On order": 50,
+        "Available": 150,
+        "Total value": 3000
+    },
+    {
+        "Item ID": "1020",
+        "Item name": "Sealant - Silicone (300ml)",
+        "On hand": 80,
+        "On order": 30,
+        "Available": 110,
+        "Total value": 880
+    }
+]
