@@ -5,13 +5,26 @@ from controllers.data_manager import DataManager
 
 
 class StockView(BaseView):
+    """
+    StockView extends baseview to display data only.
+    Some buttons are palce holders for future function.
+    """
     def __init__(self, parent, controller):
+        """
+        Initalises the layout, headerm controls, table.
+
+        Args:
+            parent: parent container.
+            controller: for navigating views.
+        """
         super().__init__(parent, controller)
 
         self.controller = controller
 
+        # load data from file
         self.data_manager = DataManager('data/items.json')
 
+        # Display title in header
         self.label = CTkLabel(
             self.header_frame,
             text="Stock Report",
@@ -24,6 +37,7 @@ class StockView(BaseView):
             padx=self.base_padx,
         )
 
+        # Place holder
         self.order_button = CTkButton(
             self.header_frame,
             text="Order Items",
@@ -50,6 +64,7 @@ class StockView(BaseView):
             ipady=self.base_ipady,
         )
 
+        # Button for switching to configure view
         self.configure_button = CTkButton(
             self.control_frame,
             text="Configure Items",
@@ -63,6 +78,7 @@ class StockView(BaseView):
             ipady=self.base_ipady,
         )
 
+        # Table to only display items
         self.item_table = ItemTable(self.content_frame, configurable=False)
         self.item_table.grid(
             row=0,
@@ -70,4 +86,6 @@ class StockView(BaseView):
             ipady=self.base_ipady,
             sticky="nsew",
         )
+
+        # Populate table with items
         self.item_table.populate(self.data_manager.items)

@@ -4,6 +4,11 @@ from app import App
 
 
 def main():
+    """Runs the application.
+    
+    Created main window. Sets size, title and state.
+    Initialises the application and data manager.
+    """
     root = Tk()
     root.title("Inventory Management System")
     root.state('zoomed')
