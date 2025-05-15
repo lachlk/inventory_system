@@ -7,23 +7,79 @@ class ConfigureView(BaseView):
     def __init__(self, parent, controller):
         super().__init__(parent, controller)
 
+        self.controller = controller
+
         self.data_manager = DataManager('data/items.json')
 
-        self.label = CTkLabel(self.header_frame, text="Configure Items", font=("Roboto", 50))
-        self.label.grid(row=1, column=0, sticky="nsw", padx=self.base_padx)
+        self.label = CTkLabel(
+            self.header_frame,
+            text="Configure Items",
+            font=("Roboto", 50),
+        )
+        self.label.grid(
+            row=1,
+            column=0,
+            sticky="nsw",
+            padx=self.base_padx,
+        )
 
-        self.save_button = CTkButton(self.header_frame, text="Save", font=self.base_font)
-        self.save_button.grid(row=1, column=1, padx=self.base_padx, ipady=self.base_ipady)
+        self.save_button = CTkButton(
+            self.header_frame,
+            text="Save",
+            font=self.base_font,
+            command=lambda: self.controller.show_frame("StockView"),
+        )
+        self.save_button.grid(
+            row=1,
+            column=1,
+            padx=self.base_padx,
+            ipady=self.base_ipady,
+        )
 
-        self.import_button = CTkButton(self.header_frame, text="Import", font=self.base_font)
-        self.import_button.grid(row=1, column=2, padx=self.base_padx, ipady=self.base_ipady)
+        self.import_button = CTkButton(
+            self.header_frame,
+            text="Import",
+            font=self.base_font,
+            state="disabled"
+        )
+        self.import_button.grid(
+            row=1,
+            column=2,
+            padx=self.base_padx,
+            ipady=self.base_ipady,
+        )
 
-        self.add_button = CTkButton(self.control_frame, text="Add", font=self.base_font)
-        self.add_button.grid(row=1, column=0, padx=self.base_padx, ipady=self.base_ipady)
+        self.add_button = CTkButton(
+            self.control_frame,
+            text="Add",
+            font=self.base_font,
+            state="disabled"
+        )
+        self.add_button.grid(
+            row=1,
+            column=0,
+            padx=self.base_padx,
+            ipady=self.base_ipady,
+        )
 
-        self.remove_button = CTkButton(self.control_frame, text="Remove", font=self.base_font)
-        self.remove_button.grid(row=1, column=1, padx=self.base_padx, ipady=self.base_ipady)
+        self.remove_button = CTkButton(
+            self.control_frame,
+            text="Remove",
+            font=self.base_font,
+            state="disabled",
+        )
+        self.remove_button.grid(
+            row=1,
+            column=1,
+            padx=self.base_padx,
+            ipady=self.base_ipady,
+        )
 
-        self.item_table = ItemTable(self.content_frame)
-        self.item_table.grid(row=0, column=0, ipady=self.base_ipady, sticky="nsew")
+        self.item_table = ItemTable(self.content_frame, configurable=True, data_manager=self.data_manager)
+        self.item_table.grid(
+            row=0,
+            column=0,
+            ipady=self.base_ipady,
+            sticky="nsew",
+            )
         self.item_table.populate(self.data_manager.items)

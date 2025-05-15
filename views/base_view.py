@@ -1,12 +1,12 @@
 from customtkinter import CTkFrame
 
+
 class BaseView(CTkFrame):
     def __init__(self, parent, controller):
         super().__init__(parent)
-
-        self.base_font=("Roboto", 20)
-        self.base_padx=15
-        self.base_ipady=15
+        self.base_font = ("Roboto", 20)
+        self.base_padx = 15
+        self.base_ipady = 15
 
         self.columnconfigure(0, weight=1)
         self.rowconfigure(0, weight=1)
@@ -25,7 +25,6 @@ class BaseView(CTkFrame):
         self.control_frame.grid_rowconfigure(0, weight=1)
         self.control_frame.grid_rowconfigure(1, weight=2)
         self.control_frame.grid_rowconfigure(2, weight=1)
-    
 
         self.content_frame = CTkFrame(self)
         self.content_frame.grid(row=2, column=0, sticky="nsew")
