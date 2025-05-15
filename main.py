@@ -8,7 +8,7 @@ def main():
     root.title("Inventory Management System")
     root.state('zoomed')
     root.minsize(800, 600)
-    
+
     app = App(root)
     data_manager = DataManager('data/items.json')
 

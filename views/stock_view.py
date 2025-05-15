@@ -63,7 +63,7 @@ class StockView(BaseView):
             ipady=self.base_ipady,
         )
 
-        self.item_table = ItemTable(self.content_frame, configurable=False, data_manager=self.data_manager)
+        self.item_table = ItemTable(self.content_frame, configurable=False)
         self.item_table.grid(
             row=0,
             column=0,
