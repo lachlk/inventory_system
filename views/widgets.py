@@ -14,6 +14,7 @@ class EntryButton:
 class ItemTable(CTkFrame):
     def __init__(self, parent):
         super().__init__(parent)
+
         self.item_keys = ["Item ID", "Item name", "On hand", "On order", "Available", "Total value"]
 
         self.columnconfigure(0, weight=1)

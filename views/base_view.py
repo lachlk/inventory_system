@@ -12,9 +12,6 @@ class BaseView(CTkFrame):
         self.rowconfigure(0, weight=1)
         self.rowconfigure(1, weight=1)
         self.rowconfigure(2, weight=4)
-        
-        self.controller = controller
-        self.pack(fill="both", expand=True)
 
         self.header_frame = CTkFrame(self, fg_color="#3a3b3b")
         self.header_frame.grid(row=0, column=0, sticky="nsew")
